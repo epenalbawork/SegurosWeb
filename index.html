@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://hgcseguros.net/wp-content/uploads/2021/02/internacional-de-seguros-logo.png" alt="Internacional de Seguros Logo" class="logo">
+            <h1>Información de Internacional de Seguro</h1>
+        </div>
+        <form id="insuranceForm">
+            <!-- Tab Navigation -->
+            <div class="tabs">
+                <button type="button" class="tab-button active" data-tab="general">Información General</button>
+                <button type="button" class="tab-button" data-tab="health">Cuestionario de Salud</button>
+                <button type="button" class="tab-button" data-tab="plan">Plan Escogido</button>
+                <button type="button" class="tab-button" data-tab="payment">Forma de Pago</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- General Information Tab -->
+                <div class="tab-pane active" id="general">
+                    <section class="form-section">
+                        <h2>👤 Información Personal</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="labCodigo">Código</label>
+                                <input type="text" id="labCodigo" name="labCodigo"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labPrimerNombre">Primer Nombre</label>
+                                <input type="text" id="labPrimerNombre" name="labPrimerNombre"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labSegundoNombre">Segundo Nombre</label>
+                                <input type="text" id="labSegundoNombre" name="labSegundoNombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="labApellidoPaterno">Apellido Paterno</label>
+                                <input type="text" id="labApellidoPaterno" name="labApellidoPaterno"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labApellidoMaterno">Apellido Materno</label>
+                                <input type="text" id="labApellidoMaterno" name="labApellidoMaterno"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labEstadoCivilId">Estado Civil</label>
+                                <select id="labEstadoCivilId" name="labEstadoCivilId"  >
+                                    <option value="">Seleccionar Estado Civil</option>
+                                    <option value="single">Soltero(a)</option>
+                                    <option value="married">Casado(a)</option>
+                                    <option value="divorced">Divorciado(a)</option>
+                                    <option value="widowed">Viudo(a)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="labIdentificacionPerUsuario">Cédula o Pasaporte</label>
+                                <input type="text" id="labIdentificacionPerUsuario" name="labIdentificacionPerUsuario"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labBirthDay">Fecha de Nacimiento</label>
+                                <input type="date" id="labBirthDay" name="labBirthDay"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labGeneroUserId">Sexo</label>
+                                <select id="labGeneroUserId" name="labGeneroUserId"  >
+                                    <option value="">Seleccionar Sexo</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Femenino</option>
+                                    <option value="O">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="labNacionalidad">Nacionalidad</label>
+                                <input type="text" id="labNacionalidad" name="labNacionalidad"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labPaisResidencia">País de Residencia</label>
+                                <input type="text" id="labPaisResidencia" name="labPaisResidencia"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labCelular">Celular</label>
+                                <input type="tel" id="labCelular" name="labCelular"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labCorreoUser">Correo Electrónico</label>
+                                <input type="email" id="labCorreoUser" name="labCorreoUser"  >
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>💼 Datos Ocupacionales</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="labEmpresaTrab">Empresa donde Trabaja</label>
+                                <input type="text" id="labEmpresaTrab" name="labEmpresaTrab"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labActividadEmpresa">Actividad Eco... de la Empresa</label>
+                                <input type="text" id="labActividadEmpresa" name="labActividadEmpresa"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labInicioLaboral">Fecha de Inicio</label>
+                                <input type="date" id="labInicioLaboral" name="labInicioLaboral"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labOcupacion">Ocupación</label>
+                                <input type="text" id="labOcupacion" name="labOcupacion"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labProfesion">Profesión</label>
+                                <input type="text" id="labProfesion" name="labProfesion"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labCorreoLaboral">Correo Laboral</label>
+                                <input type="email" id="labCorreoLaboral" name="labCorreoLaboral">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="labFunciones">Descripción de Funciones</label>
+                                <textarea id="labFunciones" name="labFunciones" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="labProvinciaOffice">Provincia</label>
+                                <input type="text" id="labProvinciaOffice" name="labProvinciaOffice"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labDistritoOffice">Distrito / Corregimiento</label>
+                                <input type="text" id="labDistritoOffice" name="labDistritoOffice"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labUrbanizacionOffice">Urbanización</label>
+                                <input type="text" id="labUrbanizacionOffice" name="labUrbanizacionOffice">
+                            </div>
+                            <div class="form-group">
+                                <label for="labCalleOffice">Calle</label>
+                                <input type="text" id="labCalleOffice" name="labCalleOffice"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labEdificioOffice">Edificio</label>
+                                <input type="text" id="labEdificioOffice" name="labEdificioOffice">
+                            </div>
+                            <div class="form-group">
+                                <label for="labIngresoAnual">Ingreso Anual Aproximado - Ocupación Actual B/</label>
+                                <input type="number" id="labIngresoAnual" name="labIngresoAnual" step="0.01"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labOtroIngreso">Ingreso Anual Aproximado - Otras Ocupaciones B/</label>
+                                <input type="number" id="labOtroIngreso" name="labOtroIngreso" step="0.01">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>🏠 Información Residencial</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="labProvinciaCasa">Provincia</label>
+                                <input type="text" id="labProvinciaCasa" name="labProvinciaCasa"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labDistritoCasa">Distrito / Corregimiento</label>
+                                <input type="text" id="labDistritoCasa" name="labDistritoCasa"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labUrbanizacionCasa">Urbanización</label>
+                                <input type="text" id="labUrbanizacionCasa" name="labUrbanizacionCasa">
+                            </div>
+                            <div class="form-group">
+                                <label for="labCalleCasa">Calle</label>
+                                <input type="text" id="labCalleCasa" name="labCalleCasa"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="labApartadoPostal">Apartado Postal</label>
+                                <input type="text" id="labApartadoPostal" name="labApartadoPostal">
+                            </div>
+                            <div class="form-group">
+                                <label for="labTelefonoResidencial">Teléfono Residencial</label>
+                                <input type="tel" id="labTelefonoResidencial" name="labTelefonoResidencial">
+                            </div>
+                            <div class="form-group">
+                                <label for="labEdificioCasa">Edificio</label>
+                                <input type="text" id="labEdificioCasa" name="labEdificioCasa">
+                            </div>
+                            <div class="form-group">
+                                <label for="labApartamento">Número de Apartamento</label>
+                                <input type="text" id="labApartamento" name="labApartamento">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Health Questionnaire Tab -->
+                <div class="tab-pane" id="health">
+                    <section class="form-section">
+                        <h2>Cuestionario de Salud</h2>
+                        <div class="form-grid">
+                            <!-- Problemas cerebrovasculares -->
+                            <div class="form-group full-width">
+                                <label>¿Problemas cerebrovasculares, migrañas o dolores de cabeza?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cerebrovascular_prospecto"> Prospecto
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cerebrovascular_conyuge"> Cónyuge
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cerebrovascular_hijos"> Hijos
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Epilepsia -->
+                            <div class="form-group full-width">
+                                <label>¿Epilepsia, convulsiones, ataque, desmayo o pérdida de conocimiento?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="epilepsia_prospecto"> Prospecto
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="epilepsia_conyuge"> Cónyuge
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="epilepsia_hijos"> Hijos
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Problemas oculares -->
+                            <div class="form-group full-width">
+                                <label>¿Problemas en los oídos o mala audición, vista, visión defectuosa, cataratas, desprendimiento de retina, desprendimiento de córnea o alteraciones en los ojos?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ojos_prospecto"> Prospecto
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ojos_conyuge"> Cónyuge
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ojos_hijos"> Hijos
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Problemas respiratorios -->
+                            <div class="form-group full-width">
+                                <label>¿Problemas del sistema respiratorio, tuberculosis, asma, enfisema o fiebre reumática?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="respiratorio_prospecto"> Prospecto
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="respiratorio_conyuge"> Cónyuge
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="respiratorio_hijos"> Hijos
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Problemas cardíacos -->
+                            <div class="form-group full-width">
+                                <label>¿Problemas del corazón (cardiovascular), circulatorio, dolores en el pecho, presión arterial (alta o baja), angina, flebitis?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cardiaco_prospecto"> Prospecto
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cardiaco_conyuge"> Cónyuge
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="cardiaco_hijos"> Hijos
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Plan Selection Tab -->
+                <div class="tab-pane" id="plan">
+                    <section class="form-section">
+                        <h2>Plan Escogido</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="labTipodePolizaId">Tipo de Póliza</label>
+                                <select id="labTipodePolizaId" name="labTipodePolizaId">
+                                    <option value="">Seleccionar Tipo de Póliza</option>
+                                    <option value="individual">Individual</option>
+                                    <option value="family">Familiar</option>
+                                    <option value="group">Grupo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="labPolizaNo">Póliza No</label>
+                                <input type="text" id="labPolizaNo" name="labPolizaNo">
+                            </div>
+                            <div class="form-group">
+                                <label for="labPlan">Plan</label>
+                                <select id="labPlan" name="labPlan">
+                                    <option value="">Seleccionar Plan</option>
+                                    <option value="basic">Plan Básico</option>
+                                    <option value="standard">Plan Estándar</option>
+                                    <option value="premium">Plan Premium</option>
+                                    <option value="vip">Plan VIP</option>
+                                </select>
+                            </div>
+                        
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Payment Information Tab -->
+                <div class="tab-pane" id="payment">
+                    <section class="form-section">
+                        <h2>Forma de Pago</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="labFormaPagoId">Forma de Pago</label>
+                                <select id="labFormaPagoId" name="labFormaPagoId">
+                                    <option value="">Seleccionar Forma de Pago</option>
+                                    <option value="cash">Efectivo</option>
+                                    <option value="card">Tarjeta</option>
+                                    <option value="transfer">Transferencia</option>
+                                    <option value="check">Cheque</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="labFrecuenciaPagoId">Frecuencia de Pago</label>
+                                <select id="labFrecuenciaPagoId" name="labFrecuenciaPagoId">
+                                    <option value="">Seleccionar Frecuencia</option>
+                                    <option value="monthly">Mensual</option>
+                                    <option value="quarterly">Trimestral</option>
+                                    <option value="semiannual">Semestral</option>
+                                    <option value="annual">Anual</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="labPrimaPago">Prima</label>
+                                <input type="number" id="labPrimaPago" name="labPrimaPago" step="0.01" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="labImpuestoPago">Impuesto 5%</label>
+                                <input type="number" id="labImpuestoPago" name="labImpuestoPago" step="0.01" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="labTotalPago">TOTAL</label>
+                                <input type="number" id="labTotalPago" name="labTotalPago" step="0.01" readonly>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-prev" style="display: none;">Anterior</button>
+                <button type="button" class="btn-next">Siguiente</button>
+                <button type="submit" class="btn-submit" style="display: none;">Enviar Solicitud</button>
+                <button type="reset" class="btn-reset">Reiniciar Formulario</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
