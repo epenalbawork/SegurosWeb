@@ -292,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function loadFormData() {
     try {
         const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get('id') || 'fd7b60ca-fb5f-47bb-9f6d-fa5ec6c2a26c';
+        const id = urlParams.get('Id') || 'fd7b60ca-fb5f-47bb-9f6d-fa5ec6c2a26c';
         
         console.log('Fetching data for ID:', id);
         
