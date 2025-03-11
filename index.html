@@ -6,6 +6,8 @@
     <title>Insurance Application Form</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
     <div class="container">
@@ -29,13 +31,10 @@
                     <section class="form-section">
                         <h2>👤 Información Personal</h2>
                         <div class="form-grid">
-                            <div class="form-group">
-                                <label for="labCodigo">Código</label>
-                                <input type="text" id="labCodigo" name="labCodigo"  >
-                            </div>
+                          
                             <div class="form-group">
                                 <label for="labPrimerNombre">Primer Nombre</label>
-                                <input type="text" id="labPrimerNombre" name="labPrimerNombre"  >
+                                <input type="text" id="labPrimerNombre" name="labPrimerNombre" required >
                             </div>
                             <div class="form-group">
                                 <label for="labSegundoNombre">Segundo Nombre</label>
@@ -43,7 +42,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="labApellidoPaterno">Apellido Paterno</label>
-                                <input type="text" id="labApellidoPaterno" name="labApellidoPaterno"  >
+                                <input type="text" id="labApellidoPaterno" name="labApellidoPaterno" required >
                             </div>
                             <div class="form-group">
                                 <label for="labApellidoMaterno">Apellido Materno</label>
@@ -51,12 +50,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="labEstadoCivilId">Estado Civil</label>
-                                <select id="labEstadoCivilId" name="labEstadoCivilId"  >
+                                <select id="labEstadoCivilId" name="labEstadoCivilId"  required>
                                     <option value="">Seleccionar Estado Civil</option>
-                                    <option value="single">Soltero(a)</option>
-                                    <option value="married">Casado(a)</option>
-                                    <option value="divorced">Divorciado(a)</option>
-                                    <option value="widowed">Viudo(a)</option>
+                                    <option value="3583754d-c7b8-4c2a-a1dd-4d3ade50b4f9">Soltero(a)</option>
+                                    <option value="871d0d0b-5453-402f-873b-22af46c1890d">Casado(a)</option>
+                                    <option value="d1b688fc-743d-4a6f-a4b6-9fb33039bf29">Divorciado(a)</option>
+                                    <option value="a5c75a51-981f-45b3-adc3-01618c795ce7">Viudo(a)</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -65,15 +64,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="labBirthDay">Fecha de Nacimiento</label>
-                                <input type="date" id="labBirthDay" name="labBirthDay"  >
+                                <input type="text" id="labBirthDay" name="labBirthDay"  >
                             </div>
                             <div class="form-group">
-                                <label for="labGeneroUserId">Sexo</label>
-                                <select id="labGeneroUserId" name="labGeneroUserId"  >
-                                    <option value="">Seleccionar Sexo</option>
-                                    <option value="M">Masculino</option>
-                                    <option value="F">Femenino</option>
-                                    <option value="O">Otro</option>
+                                <label for="labGeneroUserId">Genero</label>
+                                <select id="labGeneroUserId" name="labGeneroUserId"  required>
+                                    <option value="">Seleccionar Genero</option>
+                                    <option value="6925ea3b-f3e4-48bb-947e-c358b79362a6">Masculino</option>
+                                    <option value="43cd4709-704d-4c73-bebd-e9842e8a9fd0">Femenino</option>
+                             
                                 </select>
                             </div>
                             <div class="form-group">
@@ -81,12 +80,12 @@
                                 <input type="text" id="labNacionalidad" name="labNacionalidad"  >
                             </div>
                             <div class="form-group">
-                                <label for="labPaisResidencia">País de Residencia</label>
-                                <input type="text" id="labPaisResidencia" name="labPaisResidencia"  >
+                                <label for="labResidencia">País de Residencia</label>
+                                <input type="text" id="labResidencia" name="labResidencia"  >
                             </div>
                             <div class="form-group">
                                 <label for="labCelular">Celular</label>
-                                <input type="tel" id="labCelular" name="labCelular"  >
+                                <input type="text" id="labCelular" name="labCelular"  >
                             </div>
                             <div class="form-group">
                                 <label for="labCorreoUser">Correo Electrónico</label>
@@ -108,7 +107,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="labInicioLaboral">Fecha de Inicio</label>
-                                <input type="date" id="labInicioLaboral" name="labInicioLaboral"  >
+                                <input type="text" id="labInicioLaboral" name="labInicioLaboral"  >
                             </div>
                             <div class="form-group">
                                 <label for="labOcupacion">Ocupación</label>
@@ -182,11 +181,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="labTelefonoResidencial">Teléfono Residencial</label>
-                                <input type="tel" id="labTelefonoResidencial" name="labTelefonoResidencial">
+                                <input type="text" id="labTelefonoResidencial" name="labTelefonoResidencial">
                             </div>
                             <div class="form-group">
-                                <label for="labEdificioCasa">Edificio</label>
-                                <input type="text" id="labEdificioCasa" name="labEdificioCasa">
+                                <label for="labDireccion">Edificio</label>
+                                <input type="text" id="labDireccion" name="labDireccion">
                             </div>
                             <div class="form-group">
                                 <label for="labApartamento">Número de Apartamento</label>
@@ -291,22 +290,29 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="labTipodePolizaId">Tipo de Póliza</label>
-                                <select id="labTipodePolizaId" name="labTipodePolizaId">
+                                <select id="labTipodePolizaId" name="labTipodePolizaId" required>
                                     <option value="">Seleccionar Tipo de Póliza</option>
-                                    <option value="individual">Individual</option>
-                                    <option value="family">Familiar</option>
-                                    <option value="group">Grupo</option>
+                                    <option value="cf631828-59e2-4dcb-805d-03c8d893e187">Individual</option>
+                                    <option value="da161ed1-3088-48e1-9982-1785a55ba99f">Colectiva</option>
+                                   
                                 </select>
                             </div>
                      
                             <div class="form-group">
-                                <label for="labPlan">Plan</label>
-                                <select id="labPlan" name="labPlan">
+                                <label for="labTipodePlanId">Plan</label>
+                                <select id="labTipodePlanId" name="labTipodePlanId" required>
                                     <option value="">Seleccionar Plan</option>
-                                    <option value="basic">Plan Básico</option>
-                                    <option value="standard">Plan Estándar</option>
-                                    <option value="premium">Plan Premium</option>
-                                    <option value="vip">Plan VIP</option>
+                                    <option value="cb75c2d5-9197-47e3-b908-09bca8563bc5">Todos</option>
+                                    <option value="82aa8fb5-0d2e-4eff-889c-1e4b464869e1">Medired Infinity</option>
+                                    <option value="be0d9322-ee4c-4ef3-badd-30db1fe4485e">Elite</option>
+                                    <option value="15e590d6-e619-48f8-873c-53e32d1c0a2a">Medired 100</option>
+                                    <option value="9375090c-716c-4850-a114-73b26696d012">Medired</option>
+                                    <option value="1ac39b1c-527c-4775-b5f2-8ee61a6c517b">Kids Infinity</option>
+                                    <option value="11d475236-88af-4f8a-bb9b-9c089a7c4aad">Selecto</option>
+                                    <option value="b040d923-1e29-4120-b6af-e907c8f1f246">Integral</option>
+                                    <option value="7073525b-2f2b-4df2-97cb-f2ccaf3b5d82">Elite Infinity</option>
+                                    <option value="1d4e49ef-9d16-4553-961d-f8d2127c5342">Kids </option>
+
                                 </select>
                             </div>
                         
@@ -321,22 +327,22 @@
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="labFormaPagoId">Forma de Pago</label>
-                                <select id="labFormaPagoId" name="labFormaPagoId">
+                                <select id="labFormaPagoId" name="labFormaPagoId" required>
                                     <option value="">Seleccionar Forma de Pago</option>
-                                    <option value="cash">Efectivo</option>
-                                    <option value="card">Tarjeta</option>
-                                    <option value="transfer">Transferencia</option>
-                                    <option value="check">Cheque</option>
+                                    <option value="a1848449-32c5-4de0-9e10-56c9d3ceff16">Efectivo</option>
+                                    <option value="4ba8f277-bc73-4a12-9063-72a802bec2c9">Tarjeta</option>
+                                    <option value="cef86025-7a96-420f-bd15-5c6e801719dd">Transferencia</option>
+                                    <option value="d7a2d983-22e8-4f2f-a7d0-6135774f0dae">Cheque</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="labFrecuenciaPagoId">Frecuencia de Pago</label>
-                                <select id="labFrecuenciaPagoId" name="labFrecuenciaPagoId">
+                                <select id="labFrecuenciaPagoId" name="labFrecuenciaPagoId" required>
                                     <option value="">Seleccionar Frecuencia</option>
-                                    <option value="monthly">Mensual</option>
-                                    <option value="quarterly">Trimestral</option>
-                                    <option value="semiannual">Semestral</option>
-                                    <option value="annual">Anual</option>
+                                    <option value="b2ee2a88-3656-4bc7-94db-bf5549a6bfda">Mensual</option>
+                                    <option value="3defa0b4-c788-4a7d-96c9-da31bdb70c81">Trimestral</option>
+                                    <option value="a06911a4-d185-472b-91e5-f9a18be982a6">Semestral</option>
+                                    <option value="bf7b2c11-0ac8-43ca-92ae-c211759b00fd">Anual</option>
                                 </select>
                             </div>
                             <div class="form-group">
